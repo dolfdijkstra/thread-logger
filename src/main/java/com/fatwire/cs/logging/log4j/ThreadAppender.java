@@ -28,7 +28,6 @@ public class ThreadAppender extends RollingFileAppender {
 	}
 
 	public void subAppend(final LoggingEvent event) {
-		System.out.println("subAppend()");
 		super.subAppend(event);
 		getDelegate().doAppend(event);
 	}
